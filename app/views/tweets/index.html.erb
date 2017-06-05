@@ -1,0 +1,11 @@
+<p><%= notice %></p>
+
+<h1>Tweet一覧</h1>
+
+<% @tweets.each do |tweet| %>
+  <p>本文:<%= tweet.content %></p>
+  <%= link_to "Tweetを編集する", edit_tweet_path(tweet.id) %>
+  <%= link_to "Tweetを削除する", tweet_path(tweet.id), method: :delete, data: { confirm: '本当に削除していいですか？'} %>
+<% end %>
+
+<%= link_to "Tweetを作成する", new_tweet_path %>
