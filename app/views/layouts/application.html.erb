@@ -5,10 +5,23 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+  
+    <header>
+    <ul>
+    <li><%= link_to "トップページ", root_path %></li>
+    <li><%= link_to "Tweet", tweets_path %></li> 
+    </ul>
+    </header>
 
 <%= yield %>
+
+  <footer>
+    <p>練習用㈱</p>
+    <p>© 2016-2017 練習です！</p>
+  </footer>
 
 </body>
 </html>
