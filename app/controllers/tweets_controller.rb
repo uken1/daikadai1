@@ -16,7 +16,7 @@ class TweetsController < ApplicationController
   def create
     @tweet=Tweet.create(tweets_params)
     if @tweet.save
-    redirect_to tweets_path, notice: "Tweetを新規作成しました！"
+    redirect_to tweets_path, notice: "Tweetを作成しました！"
     else
     render 'new'
     end
@@ -24,7 +24,7 @@ class TweetsController < ApplicationController
   
   def confirm
     @tweet=Tweet.new(tweets_params)
-    render :new if @tweet.invalid? 
+    render :new if @tweet.invalid?
   end
   
   def edit
